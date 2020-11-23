@@ -1,7 +1,5 @@
 @extends('layouts.landing')
-
 @section('contenido')
-
 <!-- About-->
 <section class="page-section bg-primary" id="about">
     <div class="container">
@@ -9,7 +7,9 @@
             <div class="col-lg-8 text-center">
                 <h2 class="text-white mt-0">We've got what you need!</h2>
                 <hr class="divider light my-4" />
-                <p class="text-white-50 mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
+                <p class="text-white-50 mb-4">
+                    Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!
+                </p>
                 <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
             </div>
         </div>
@@ -57,8 +57,8 @@
     <div class="container-fluid p-0">
         <div class="row no-gutters">
             <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg">
-                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="" />
+                <a class="portfolio-box" href="{{ asset('assets/landing/assets/img/portfolio/fullsize/1.jpg') }}">
+                    <img class="img-fluid" src="{{ asset('assets/landing/assets/img/portfolio/thumbnails/1.jpg') }}" alt="" />
                     <div class="portfolio-box-caption">
                         <div class="project-category text-white-50">Category</div>
                         <div class="project-name">Project Name</div>
@@ -66,8 +66,8 @@
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg">
-                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg" alt="" />
+                <a class="portfolio-box" href="{{ asset('assets/landing/assets/img/portfolio/fullsize/2.jpg') }}">
+                    <img class="img-fluid" src="{{ asset('assets/landing/assets/img/portfolio/thumbnails/2.jpg') }}" alt="" />
                     <div class="portfolio-box-caption">
                         <div class="project-category text-white-50">Category</div>
                         <div class="project-name">Project Name</div>
@@ -75,8 +75,8 @@
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg">
-                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="" />
+                <a class="portfolio-box" href="{{ asset('assets/landing/assets/img/portfolio/fullsize/3.jpg') }}">
+                    <img class="img-fluid" src="{{ asset('assets/landing/assets/img/portfolio/thumbnails/3.jpg') }}" alt="" />
                     <div class="portfolio-box-caption">
                         <div class="project-category text-white-50">Category</div>
                         <div class="project-name">Project Name</div>
@@ -84,8 +84,8 @@
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg">
-                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="" />
+                <a class="portfolio-box" href="{{ asset('assets/landing/assets/img/portfolio/fullsize/4.jpg') }}">
+                    <img class="img-fluid" src="{{ asset('assets/landing/assets/img/portfolio/thumbnails/4.jpg') }}" alt="" />
                     <div class="portfolio-box-caption">
                         <div class="project-category text-white-50">Category</div>
                         <div class="project-name">Project Name</div>
@@ -93,8 +93,8 @@
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg">
-                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg" alt="" />
+                <a class="portfolio-box" href="{{ asset('assets/landing/assets/img/portfolio/fullsize/5.jpg') }}">
+                    <img class="img-fluid" src="{{ asset('assets/landing/assets/img/portfolio/thumbnails/5.jpg') }}" alt="" />
                     <div class="portfolio-box-caption">
                         <div class="project-category text-white-50">Category</div>
                         <div class="project-name">Project Name</div>
@@ -102,8 +102,8 @@
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg">
-                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="" />
+                <a class="portfolio-box" href="{{ asset('assets/landing/assets/img/portfolio/fullsize/6.jpg') }}">
+                    <img class="img-fluid" src="{{ asset('assets/landing/assets/img/portfolio/thumbnails/6.jpg') }}" alt="" />
                     <div class="portfolio-box-caption p-3">
                         <div class="project-category text-white-50">Category</div>
                         <div class="project-name">Project Name</div>
@@ -127,7 +127,9 @@
             <div class="col-lg-8 text-center">
                 <h2 class="mt-0">Let's Get In Touch!</h2>
                 <hr class="divider my-4" />
-                <p class="text-muted mb-5">Ready to start your next project with us? Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                <p class="text-muted mb-5">
+                    Ready to start your next project with us? Give us a call or send us an email and we will get back to you as soon as possible!
+                </p>
             </div>
         </div>
         <div class="row">
@@ -143,5 +145,4 @@
         </div>
     </div>
 </section>
-
 @endsection

@@ -34,13 +34,13 @@
         <li class="nav-item d-md-down-none">
             <a class="nav-link" href="#">
                 <i class="icon-bell"></i>
-                <span class="badge badge-pill badge-danger">5</span>
+                <span class="badge badge-pill badge-danger">1</span>
             </a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link" style="margin-right: 10px" data-toggle="dropdown" href="#" role="button"
                aria-haspopup="true" aria-expanded="false">
-
+               {{ Auth::user()->name }}
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <div class="dropdown-header text-center">
@@ -48,7 +48,7 @@
                 </div>
                 <a class="dropdown-item" href="#">
                     <i class="fa fa-envelope-o"></i> @lang('auth.app.messages')
-                    <span class="badge badge-success">42</span>
+                    <span class="badge badge-success">2</span>
                 </a>
                 <div class="dropdown-header text-center">
                     <strong>@lang('auth.app.settings')</strong>

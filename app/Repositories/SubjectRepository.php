@@ -2,29 +2,24 @@
 
 namespace App\Repositories;
 
-use App\Models\Student;
+use App\Models\Subject;
 use App\Repositories\BaseRepository;
 
 /**
- * Class StudentRepository
+ * Class SubjectRepository
  * @package App\Repositories
- * @version November 24, 2020, 1:46 am UTC
+ * @version November 24, 2020, 2:08 am UTC
 */
 
-class StudentRepository extends BaseRepository
+class SubjectRepository extends BaseRepository
 {
     /**
      * @var array
      */
     protected $fieldSearchable = [
-        'names_student',
-        'surnames_student',
-        'ci',
-        'email',
-        'password',
-        'birthdate_student',
-        'gender_student',
-        'cellular_student'
+        'name_subjects',
+        'course',
+        'parallel'
     ];
 
     /**
@@ -42,6 +37,6 @@ class StudentRepository extends BaseRepository
      **/
     public function model()
     {
-        return Student::class;
+        return Subject::class;
     }
 }

@@ -13,11 +13,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Route::get('/', 'LandingController@index');
-Auth::routes();
 //Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('students', 'StudentController');
-
-
+Auth::routes();
 Auth::routes(['verify' => true]);
-
 Route::get('/', 'HomeController@index')->middleware('verified');
+Route::resource('students', 'StudentController');
+Route::resource('assistances', 'AssistanceController');
+Route::resource('subjects', 'SubjectController');
+Route::resource('themes', 'ThemeController');
+Route::resource('questions', 'QuestionController');
+Route::resource('details', 'DetailController');
+Route::resource('exams', 'ExamController');

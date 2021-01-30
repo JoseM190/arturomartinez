@@ -40,3 +40,9 @@
         <span>Exams</span>
     </a>
 </li>
+<li class="nav-item {{ Request::is('contacto*') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('contacto.index') }}">
+        <i class="nav-icon icon-cursor"></i>
+        <span>Contactos</span>
+    </a>
+</li>

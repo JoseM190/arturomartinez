@@ -71,6 +71,7 @@
                         </form>
                     </div>
                 </div>
+                <div class="g-recaptcha" data-sitekey="6LfK0yQaAAAAAKwvkEKdwfp_xxNl-_ANAwWZ-oCH"></div>
                 <div class="card text-white bg-primary py-5 d-md-down-none" style="width:44%">
                     <div class="card-body text-center">
                         <div>

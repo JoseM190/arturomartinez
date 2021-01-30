@@ -82,7 +82,11 @@
                                </span>
                             @endif
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block btn-flat">@lang('auth.register')</button>
+                        <div class="g-recaptcha" data-sitekey="6LdRBEMaAAAAALiPeVh8n5GryFlZq4vvpkjGY8b2"></div>
+
+
+
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">@lang('auth.sign_in')</button>
                         <a href="{{ url('/login') }}" class="text-center">@lang('auth.registration.have_membership')</a>
                     </form>
                 </div>
@@ -96,5 +100,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui@2.1.16/dist/js/coreui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/perfect-scrollbar.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 </body>
 </html>

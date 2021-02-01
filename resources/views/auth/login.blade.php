@@ -28,8 +28,7 @@
                     <div class="card-body">
                         <form method="post" action="{{ url('/login') }}">
                             @csrf
-                            <h1>@lang('auth.sign_in')</h1>
-                            <p class="text-muted">@lang('auth.login.title')</p>
+                            <h1>@lang('Sign In')</h1>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">
@@ -37,7 +36,7 @@
                                     </span>
                                 </div>
                                 <input type="email" class="form-control {{ $errors->has('email')?'is-invalid':'' }}" name="email" value="{{ old('email') }}"
-                                       placeholder="@lang('auth.email')">
+                                       placeholder="@lang('email')">
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('email') }}</strong>
@@ -51,34 +50,35 @@
                                     </span>
                                 </div>
                                 <input type="password" class="form-control {{ $errors->has('password')?'is-invalid':'' }}" name="password"
-                                        placeholder="@lang('auth.password')">
+                                        placeholder="@lang('password')">
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback">
                                        <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif
                             </div>
+                            <div class="g-recaptcha" data-sitekey="6LfK0yQaAAAAAKwvkEKdwfp_xxNl-_ANAwWZ-oCH"></div>
+                            <br>
                             <div class="row">
                                 <div class="col-6">
-                                    <button class="btn btn-primary px-4" type="submit">@lang('auth.sign_in')</button>
+                                    <button class="btn btn-primary px-4" type="submit">@lang('Get In')</button>
                                 </div>
                                 <div class="col-6 text-right">
                                     <a class="btn btn-link px-0" href="{{ url('/password/reset') }}">
-                                        @lang('auth.login.forgot_password')
+                                        @lang('Forgot Password')
                                     </a>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
-                <div class="g-recaptcha" data-sitekey="6LfK0yQaAAAAAKwvkEKdwfp_xxNl-_ANAwWZ-oCH"></div>
                 <div class="card text-white bg-primary py-5 d-md-down-none" style="width:44%">
                     <div class="card-body text-center">
                         <div>
-                            <h2>@lang('auth.register')</h2>
+                            <h2>@lang('Register')</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua.</p>
-                                <a class="btn btn-primary active mt-3" href="{{ url('/register') }}">@lang('auth.register')</a>
+                                <a class="btn btn-primary active mt-3" href="{{ url('/register') }}">@lang('Register')</a>
                         </div>
                     </div>
                 </div>
@@ -92,5 +92,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui@2.1.16/dist/js/coreui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/perfect-scrollbar.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 </body>
 </html>

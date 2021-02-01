@@ -2,36 +2,56 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreatemessagesRequest;
+use App\Http\Requests\UpdatemessagesRequest;
+use App\Repositories\messagesRepository;
+use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
-use App\Mail\MessageReceived;
+use App\messages\index;
+use Flash;
+use Response;
 
-class MessagesController extends Controller
+class messagesController extends AppBaseController
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    /** @var  messagesRepository */
+    private $messagesRepository;
+
+    public function __construct(messagesRepository $messagesRepo)
     {
-        //
+        $this->messagesRepository = $messagesRepo;
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Display a listing of the messages.
      *
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     *
+     * @return Response
+     */
+    public function index(Request $request)
+    {
+        $messages = $this->messagesRepository->all();
+
+        return view('messages.index')
+            ->with('messages', $messages);
+    }
+
+    /**
+     * Show the form for creating a new messages.
+     *
+     * @return Response
      */
     public function create()
     {
-        //
+
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created messages in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param CreatemessagesRequest $request
+     *
+     * @return Response
      */
     public function store()
     {
@@ -44,53 +64,59 @@ class MessagesController extends Controller
             'name.required' => __('I need your name')
         ]);
 
-        Mail::to('artu.mar1903@gmail.com')->queue(new MessageReceived($message));
+        messages::to('artu.mar1903@gmail.com')->queue(new index($message));
 
         return 'Mensaje enviado';
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified messages.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     *
+     * @return Response
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified messages.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     *
+     * @return Response
      */
-    public function edit($id)
+    public function edit()
     {
-        //
+
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified messages in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     * @param UpdatemessagesRequest $request
+     *
+     * @return Response
      */
-    public function update(Request $request, $id)
+    public function update()
     {
-        //
+
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified messages from storage.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     *
+     * @throws \Exception
+     *
+     * @return Response
      */
-    public function destroy($id)
+    public function destroy()
     {
-        //
+
     }
 }

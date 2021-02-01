@@ -68,7 +68,7 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{{ url('/logout') }}" class="btn btn-default btn-flat"
                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    <i class="fa fa-lock"></i>@lang('Sign Out')
+                    <i class="cil-room"></i>@lang('Sign Out')
                 </a>
                 <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                     @csrf
@@ -100,12 +100,12 @@
 
 <footer class="app-footer">
     <div>
-        <a href="https://www.facebook.com/ColGermanBuschYacuiba/?ref=page_internal">U. E. Nal. Pdte. German Busch </a>
+        <a href="">Ingeniería Informática </a>
         <span>&copy; 2021 U.A.J.M.S.</span>
     </div>
     <div class="ml-auto">
         <span>Created by</span>
-        <a href="https://www.facebook.com/joshep.mar.773/">Martinez Jose Arturo</a>
+        <a href="https://www.facebook.com/joshep.mar.773/">Martínez José Arturo</a>
     </div>
 </footer>
 </body>

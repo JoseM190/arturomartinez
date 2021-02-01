@@ -32,6 +32,6 @@ class MessageReceived_ extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.message-received');
+        return $this->view('messages.index');
     }
 }

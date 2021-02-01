@@ -7,11 +7,13 @@ use App\Http\Requests\UpdatemessagesRequest;
 use App\Repositories\messagesRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use App\messages\index;
+use App\Mail\MessageReceived;
 use Flash;
 use Response;
 
-class messagesController extends AppBaseController
+class MessagesController extends AppBaseController
 {
     /** @var  messagesRepository */
     private $messagesRepository;
@@ -64,7 +66,7 @@ class messagesController extends AppBaseController
             'name.required' => __('I need your name')
         ]);
 
-        messages::to('artu.mar1903@gmail.com')->queue(new index($message));
+        Mail::to('artu.mar1903@gmail.com')->queue(new MessageReceived($message));
 
         return 'Mensaje enviado';
     }

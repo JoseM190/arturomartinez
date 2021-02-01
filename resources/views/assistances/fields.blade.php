@@ -22,7 +22,7 @@
 <!-- Student Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('student_id', 'Student Id:') !!}
-    {!! Form::number('student_id', null, ['class' => 'form-control']) !!}
+    {!! Form::number('student_id', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Submit Field -->

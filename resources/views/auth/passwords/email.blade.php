@@ -34,7 +34,7 @@
                         <form method="post" action="{{ url('/password/email') }}">
                             @csrf
                             <h1>@lang('auth.reset_password.title')</h1>
-                            <p class="text-muted">@lang('auth.forgot_password.title')</p>
+                            <p class="text-muted">@lang('Forgot Password')</p>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">
@@ -42,7 +42,7 @@
                                     </span>
                                 </div>
                                 <input type="email" class="form-control {{ $errors->has('email')?'is-invalid':'' }}" name="email" value="{{ old('email') }}"
-                                       placeholder="@lang('auth.email')">
+                                       placeholder="@lang('Email')">
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('email') }}</strong>
@@ -53,7 +53,7 @@
                             <div class="row">
                                 <div class="col-6 offset-6">
                                     <button class="btn btn-block btn-primary" type="submit">
-                                        <i class="fa fa-btn fa-envelope"></i> @lang('auth.forgot_password.send_pwd_reset')
+                                        <i class="fa fa-btn fa-envelope"></i> @lang('Forgot Password Send')
                                     </button>
                                 </div>
                             </div>

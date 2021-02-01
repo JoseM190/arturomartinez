@@ -17,7 +17,7 @@
                         <div class="card-body">
                             @include('messages.create')
                             <div class="pull-right mr-3">
-
+                                @include('mails.message-received')
                             </div>
                         </div>
                     </div>
@@ -26,4 +26,3 @@
         </div>
     </div>
 @endsection
-

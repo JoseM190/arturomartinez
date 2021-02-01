@@ -7,7 +7,7 @@
 <!-- Subject Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('subject_id', 'Subject Id:') !!}
-    {!! Form::number('subject_id', null, ['class' => 'form-control']) !!}
+    {!! Form::number('subject_id', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Submit Field -->

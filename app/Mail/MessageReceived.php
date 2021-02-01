@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class MessageReceived_ extends Mailable
+class MessageReceived extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -32,6 +32,6 @@ class MessageReceived_ extends Mailable
      */
     public function build()
     {
-        return $this->view('messages.index');
+        return $this->view('emails.message-received');
     }
 }

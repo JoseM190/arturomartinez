@@ -7,7 +7,7 @@
 <!-- Detail Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('detail_id', 'Detail Id:') !!}
-    {!! Form::number('detail_id', null, ['class' => 'form-control']) !!}
+    {!! Form::number('detail_id', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Date Exam Field -->
@@ -40,13 +40,13 @@
 <!-- Student2 Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('student2_id', 'Student2 Id:') !!}
-    {!! Form::number('student2_id', null, ['class' => 'form-control']) !!}
+    {!! Form::number('student2_id', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Theme2 Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('theme2_id', 'Theme2 Id:') !!}
-    {!! Form::number('theme2_id', null, ['class' => 'form-control']) !!}
+    {!! Form::number('theme2_id', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Submit Field -->

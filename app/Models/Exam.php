@@ -25,7 +25,7 @@ class Exam extends Model
     use SoftDeletes;
 
     public $table = 'exams';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -52,7 +52,7 @@ class Exam extends Model
         'id' => 'integer',
         'description' => 'string',
         'detail_id' => 'integer',
-        'date_exam' => 'date',
+        'date_exam' => 'datetime',
         'note_exam' => 'float',
         'student2_id' => 'integer',
         'theme2_id' => 'integer'
@@ -65,11 +65,11 @@ class Exam extends Model
      */
     public static $rules = [
         'description' => 'required|string|max:50',
-        'detail_id' => 'required|integer',
+        'detail_id' => 'required|integer|max:255',
         'date_exam' => 'required',
         'note_exam' => 'required|numeric',
-        'student2_id' => 'required|integer',
-        'theme2_id' => 'required|integer',
+        'student2_id' => 'required|integer|max:255',
+        'theme2_id' => 'required|integer|max:255',
         'created_at' => 'nullable',
         'updated_at' => 'nullable',
         'deleted_at' => 'nullable'

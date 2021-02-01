@@ -1,19 +1,19 @@
 <!-- Student1 Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('student1_id', 'Student1 Id:') !!}
-    {!! Form::number('student1_id', null, ['class' => 'form-control']) !!}
+    {!! Form::number('student1_id', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Theme1 Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('theme1_id', 'Theme1 Id:') !!}
-    {!! Form::number('theme1_id', null, ['class' => 'form-control']) !!}
+    {!! Form::number('theme1_id', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Question Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('question_id', 'Question Id:') !!}
-    {!! Form::number('question_id', null, ['class' => 'form-control']) !!}
+    {!! Form::number('question_id', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Answer Student Field -->

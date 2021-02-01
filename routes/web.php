@@ -24,6 +24,4 @@ Route::resource('themes', 'ThemeController');
 Route::resource('questions', 'QuestionController');
 Route::resource('details', 'DetailController');
 Route::resource('exams', 'ExamController');
-
-
-Route::resource('messages', 'messagesController');
+Route::resource('messages', 'MessagesController');

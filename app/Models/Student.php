@@ -27,7 +27,7 @@ class Student extends Model
     use SoftDeletes;
 
     public $table = 'students';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -59,7 +59,7 @@ class Student extends Model
         'ci' => 'integer',
         'email' => 'string',
         'password' => 'string',
-        'birthdate_student' => 'date',
+        'birthdate_student' => 'datetime',
         'gender_student' => 'string',
         'cellular_student' => 'integer'
     ];
@@ -72,12 +72,12 @@ class Student extends Model
     public static $rules = [
         'names_student' => 'required|string|max:30',
         'surnames_student' => 'required|string|max:30',
-        'ci' => 'required|integer',
+        'ci' => 'required|integer|max:255',
         'email' => 'required|string|max:191',
         'password' => 'required|string|max:20',
         'birthdate_student' => 'required',
         'gender_student' => 'required|string|max:1',
-        'cellular_student' => 'required|integer',
+        'cellular_student' => 'required|integer|max:255',
         'created_at' => 'nullable',
         'updated_at' => 'nullable',
         'deleted_at' => 'nullable'

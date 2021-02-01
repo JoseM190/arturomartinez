@@ -25,7 +25,7 @@ class Detail extends Model
     use SoftDeletes;
 
     public $table = 'details';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -62,9 +62,9 @@ class Detail extends Model
      * @var array
      */
     public static $rules = [
-        'student1_id' => 'required|integer',
-        'theme1_id' => 'required|integer',
-        'question_id' => 'required|integer',
+        'student1_id' => 'required|integer|max:255',
+        'theme1_id' => 'required|integer|max:255',
+        'question_id' => 'required|integer|max:255',
         'answer_student' => 'required|string|max:50',
         'score' => 'required|numeric',
         'created_at' => 'nullable',

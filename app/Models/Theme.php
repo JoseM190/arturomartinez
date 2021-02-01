@@ -22,7 +22,7 @@ class Theme extends Model
     use SoftDeletes;
 
     public $table = 'themes';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -54,7 +54,7 @@ class Theme extends Model
      */
     public static $rules = [
         'title_theme' => 'required|string|max:30',
-        'subject_id' => 'required|integer',
+        'subject_id' => 'required|integer|max:255',
         'created_at' => 'nullable',
         'updated_at' => 'nullable',
         'deleted_at' => 'nullable'

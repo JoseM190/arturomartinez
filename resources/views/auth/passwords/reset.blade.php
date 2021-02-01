@@ -29,14 +29,14 @@
                     <form method="post" action="{{ url('/password/reset') }}">
                         @csrf
                         <input type="hidden" name="token" value="{{ $token }}">
-                        <h1>@lang('auth.reset_password.title')</h1>
-                        <p class="text-muted">@lang('auth.reset_password.title')</p>
+                        <h1>@lang('Reset Password')</h1>
+                        <p class="text-muted">@lang('Reset Password')</p>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">@</span>
                             </div>
                             <input type="email" class="form-control {{ $errors->has('email')?'is-invalid':'' }}" name="email" value="{{ old('email') }}"
-                                   placeholder="@lang('auth.email')">
+                                   placeholder="@lang('Email')">
                             @if ($errors->has('email'))
                                 <span class="invalid-feedback">
                                     <strong>{{ $errors->first('email') }}</strong>
@@ -50,7 +50,7 @@
                               </span>
                             </div>
                             <input type="password" class="form-control {{ $errors->has('password')?'is-invalid':''}}" name="password"
-                                   placeholder="@lang('auth.password')">
+                                   placeholder="@lang('Password')">
                             @if ($errors->has('password'))
                                 <span class="invalid-feedback">
                                     <strong>{{ $errors->first('password') }}</strong>
@@ -64,7 +64,7 @@
                               </span>
                             </div>
                             <input type="password" name="password_confirmation" class="form-control"
-                                   placeholder="@lang('auth.confirm_password')">
+                                   placeholder="@lang('Confirm Password')">
                             @if ($errors->has('password_confirmation'))
                                 <span class="help-block">
                                   <strong>{{ $errors->first('password_confirmation') }}</strong>
@@ -72,7 +72,7 @@
                             @endif
                         </div>
                         <button type="submit" class="btn btn-block btn-primary btn-block btn-flat">
-                            <i class="fa fa-btn fa-refresh"></i> @lang('auth.reset_password.reset_pwd_btn')
+                            <i class="fa fa-btn fa-refresh"></i> @lang('Reset Password')
                         </button>
                     </form>
                 </div>

@@ -19,7 +19,7 @@ class Assistance extends Model
     use SoftDeletes;
 
     public $table = 'assistances';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -40,7 +40,7 @@ class Assistance extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'date_assistances' => 'date',
+        'date_assistances' => 'datetime',
         'student_id' => 'integer'
     ];
 
@@ -51,7 +51,7 @@ class Assistance extends Model
      */
     public static $rules = [
         'date_assistances' => 'required',
-        'student_id' => 'required|integer',
+        'student_id' => 'required|integer|max:255',
         'created_at' => 'nullable',
         'updated_at' => 'nullable',
         'deleted_at' => 'nullable'

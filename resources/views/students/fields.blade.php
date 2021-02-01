@@ -13,7 +13,7 @@
 <!-- Ci Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('ci', 'Ci:') !!}
-    {!! Form::number('ci', null, ['class' => 'form-control']) !!}
+    {!! Form::number('ci', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Email Field -->
@@ -58,7 +58,7 @@
 <!-- Cellular Student Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('cellular_student', 'Cellular Student:') !!}
-    {!! Form::number('cellular_student', null, ['class' => 'form-control']) !!}
+    {!! Form::number('cellular_student', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Submit Field -->

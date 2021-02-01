@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Register | CoreUI | {{ config('app.name') }}</title>
+    <title>Register | {{ config('app.name') }}</title>
     <meta name="description" content="CoreUI Template - InfyOm Laravel Generator">
     <meta name="keyword" content="CoreUI,Bootstrap,Admin,Template,InfyOm,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
@@ -81,10 +81,9 @@
                                </span>
                             @endif
                         </div>
-                        <div class="g-recaptcha" data-sitekey="6LdRBEMaAAAAALiPeVh8n5GryFlZq4vvpkjGY8b2"></div>
-
+                        <div class="g-recaptcha" data-sitekey="6LdRBEMaAAAAALiPeVh8n5GryFlZq4vvpkjGY8b2"></div><br>
                         <button type="submit" class="btn btn-primary btn-block btn-flat">@lang('Sign In')</button>
-                        <a href="{{ url('/login') }}" class="text-center">@lang('Registration Have Membership')</a>
+                        <a href="{{ url('/login') }}" class="text-center">@lang('Go Back')</a>
                     </form>
                 </div>
             </div>

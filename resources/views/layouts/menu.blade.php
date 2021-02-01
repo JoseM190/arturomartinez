@@ -1,3 +1,9 @@
+<li class="nav-item">
+    <a class="nav-link" href="/home">
+        <i class="nav-icon cil-house"></i>
+        <span>Home</span>
+    </a>
+</li>
 <li class="nav-item {{ Request::is('students*') ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('students.index') }}">
         <i class="nav-icon icon-cursor"></i>
@@ -40,9 +46,18 @@
         <span>Exams</span>
     </a>
 </li>
-<li class="nav-item {{ Request::is('contacto*') ? 'active' : '' }}">
-    <a class="nav-link" href="{{ route('contacto.index') }}">
+
+<li class="nav-item nav-dropdown">
+    <a class="nav-link nav-dropdown-toggle" href="">
         <i class="nav-icon icon-cursor"></i>
-        <span>Contactos</span>
+        <span>Contacts</span>
     </a>
+    <ul class="nav-dropdown-items">
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="nav-icon cui-puzzle"></i>
+            <span>Email</span>
+          </a>
+        </li>
+      </ul>
 </li>

@@ -84,8 +84,6 @@
                         </div>
                         <div class="g-recaptcha" data-sitekey="6LdRBEMaAAAAALiPeVh8n5GryFlZq4vvpkjGY8b2"></div>
 
-
-
                         <button type="submit" class="btn btn-primary btn-block btn-flat">@lang('auth.sign_in')</button>
                         <a href="{{ url('/login') }}" class="text-center">@lang('auth.registration.have_membership')</a>
                     </form>
